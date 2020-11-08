@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'home/about'
+  #get 'search' => 'searches#search'
+  get 'search/search'
   root to:'home#top'
   resources :users, only: [:show, :index, :edit, :update] do
     member do
